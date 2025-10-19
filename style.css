@@ -1,0 +1,173 @@
+/* Definição de Cores e Estilos Globais */
+:root {
+    --color-bg: #000000;
+    --color-neon: #00ff7f; /* Verde-neon */
+    --color-text: #b3ffda;
+    --color-highlight: #004d26;
+    --shadow-neon: 0 0 5px var(--color-neon), 0 0 10px var(--color-neon);
+}
+
+/* Base */
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    border: 2px solid var(--color-neon);
+    box-shadow: var(--shadow-neon);
+    padding: 30px;
+    background-color: #0d0d0d;
+    animation: flicker 1s infinite alternate;
+}
+
+/* Efeito de Neon */
+.neon-title {
+    color: var(--color-neon);
+    text-shadow: var(--shadow-neon);
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--color-highlight);
+    padding-bottom: 10px;
+}
+
+/* Ícone do Detetive Digital (Lupa) */
+.lupa-icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+/* Estilos de Tipografia */
+.subtext {
+    text-align: center;
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 0.9em;
+    letter-spacing: 5px;
+    margin-top: 0;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    color: #00b359;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-neon), transparent);
+    margin: 20px 0;
+}
+
+/* Conteúdo */
+main {
+    padding: 20px 0;
+}
+
+.content-box {
+    background-color: #1a1a1a;
+    border: 1px solid var(--color-highlight);
+    padding: 20px;
+}
+
+.section-title {
+    color: var(--color-neon);
+    font-size: 1.5em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--color-highlight);
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: var(--color-neon);
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.disclaimer {
+    color: #ff0000; /* Vermelho para destaque de risco */
+    text-shadow: 0 0 1px #ff0000;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    background-color: #2b0000;
+}
+
+.warning-text {
+    color: #ffcc00; /* Amarelo para advertência */
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.warning-text-small {
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+/* Listas */
+ul {
+    list-style-type: '>> ';
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.list li {
+    color: var(--color-text);
+}
+
+.warning-list li {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.final-statement {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-neon);
+}
+
+/* Footer e Link do Bot */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-highlight);
+    margin-top: 20px;
+}
+
+.neon-link {
+    color: var(--color-neon);
+    text-decoration: none;
+    font-size: 1.1em;
+    text-shadow: var(--shadow-neon);
+    transition: text-shadow 0.3s;
+}
+
+.neon-link:hover {
+    text-shadow: 0 0 10px var(--color-neon), 0 0 20px var(--color-neon);
+}
+
+/* Animação Sutil de Flicker */
+@keyframes flicker {
+    0% { opacity: 0.98; }
+    50% { opacity: 1; }
+    100% { opacity: 0.98; }
+}
